@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to Glass Classification</h1>
+
+    <div class = 'container'>
+    <form action="{% url 'result' %}">
+
+      {% csrf_token %}
+
+
+      Pregnancies: <input type="text" required name="P"><br><br>
+      Glucose: <input type="text" required name="G"><br><br>
+      Blood Pressure: <input type="text" required name="BP"><br><br>
+      Skin Thickness: <input type="text" required name="ST"><br><br>
+      Insulin: <input type="text" required name="I"><br><br>
+      BMI: <input type="text" required name="BMI"><br><br>
+      Diabetes Pedigree Funtion: <input type="text" required name="DPF"><br><br>
+      Age: <input type="text" required name="A"><br><br>
+
+
+      <input type="submit" name="" value="Submit">
+
+    </form>
+</div>
+
+
+  </body>
+</html>

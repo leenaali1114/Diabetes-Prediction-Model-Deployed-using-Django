@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <title>Diabetes Prediction using Django</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 12px;
+      }
+      form {
+      border: 5px solid #f1f1f1;
+      }
+      input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 8px;
+      margin: 2px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      .icon {
+      font-size: 50px;
+      display: flex;
+      justify-content: center;
+      color: #4286f4;
+      }
+      button {
+      background-color: #4286f4;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grab;
+      width: 48%;
+      }
+      h1 {
+      text-align:center;
+      fone-size:15;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: center;
+      margin: 24px 40px 12px;
+      }
+      .container {
+      padding: 9px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      /* Change styles for span on extra small screens */
+      @media screen and (max-width: 100px) {
+      span.psw {
+      display: block;
+      float: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="{% url 'result' %}">
+      <h1>Diabetes Prediction</h1>
+      <div class="icon">
+        <i class="fas fa-syringe"></i>
+      </div>
+      <div class="formcontainer">
+      <div class="container">
+        <label for="preg"><strong>Pregnancies</strong></label>
+        <input type="text" placeholder="0 for none/male" name="P" required>
+        <label for="gluc"><strong>Glucose</strong></label>
+        <input type="text" placeholder="Your Glucose Levels: 0-240" name="G" required>
+        <label for="bloo"><strong>Blood Pressure</strong></label>
+        <input type="text" placeholder="Your Blood Pressure(BP): 60-200" name="BP" required>
+        <label for="skin"><strong>Skin Thickness</strong></label>
+        <input type="text" placeholder="Your Triceps Skin Fold Thickness (mm)" name="ST" required>
+        <label for="insu"><strong>Insulin</strong></label>
+        <input type="text" placeholder="Your 2-Hour Serum Insulin Levels (mu U/ml)" name="I" required>
+        <label for="bmi"><strong>BMI</strong></label>
+        <input type="text" placeholder="Your Body Mass Index (weight in kg/(height in m)^2)" name="BMI" required>
+        <pre>
+        If your Family has a history of one or more diabetic patients enter a number >0.7 and <1.8.
+        (Upto 3 digits after the decimel can be entered.)
+        The number increases as number of patients with diabetes in your family increases.
+        If your family does not have a history of diabetic patients enter a number >0 and <0.5.
+        (Upto 3 digits after the decime can be entered.)
+        </pre>
+
+        <label for="dpf"><strong>Diabetes Pedigree Function</strong></label>
+        <input type="text" placeholder="Your Family History of Diabetes Ratio" name="DPF" required>
+        <label for="age"><strong>Age</strong></label>
+        <input type="text" placeholder="Enter Age (years)" name="A" required>
+      </div>
+      <button type="submit"><strong>SUBMIT</strong></button>
+
+    </form>
+  </body>
+</html>

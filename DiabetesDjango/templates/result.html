@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      h1{
+        text-align: center;
+      }
+      h2{
+        text-align: center;
+      }
+      body{
+        background-color: lightblue;
+      }
+      .tab4 {
+            tab-size: 8;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+
+      var res
+      if ({{ans}} == 1)
+        {
+        res = "You may have Diabetes"
+      } else{
+        res = "You don't have Diabetes"
+      }
+
+    </script>
+
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <div >
+
+
+    <h1> GENOMETRICS </h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2> YOUR RESULT </h2>
+    <hr>
+
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <script>
+        document.write(res)
+
+    </script>
+<br><br><br>
+        <a href="{% url 'home' %}">Click here to Go back to Home</a>
+
+
+    </div>
+
+  </body>
+</html>
